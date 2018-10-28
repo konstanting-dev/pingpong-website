@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>PingPing - better messenger</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,300,600" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="shortcut  icon" href="favicon.ico">
+  <!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("visualization", '1', {packages: ["corechart"]});
+    google.charts.setOnLoadCallback(drawChartPREICO);
+    function drawChartPREICO() {
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['R&D (including team expanding, advisers)', 33],
+        ['Indirect (legal, office)', 26],
+        ['Marketing (promotion,  community & expansion)', 39],
+        ['ICO-Hypethon conditions', 2]
+      ]);
+
+      var options = {
+        pieHole: 0.85,
+        legend: 'none',
+        colors: ['#248a8a', '#16bfbf', '#a0e5e3', '#d2f2ed'],
+        sliceVisibilityThreshold: .01,
+        pieStartAngle: 220,
+        height: '100%',
+        width: '100%',
+        pieSliceText: 'none',
+        chartArea: {left: 0, top: 0, right: 0, bottom: 0, width: '100%', height: '100%'}
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('chart1'));
+      chart.draw(data, options);
+    }
+    google.charts.setOnLoadCallback(drawChartICO);
+    function drawChartICO() {
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['ICO-Hypethon conditions', 2],
+        ['PingPong Team', 5],
+        ['R&D (including team expanding, advisers)', 30],
+        ['Marketing (promotion, market growth, community & expansion)', 46],
+        ['Indirect (legal, office)', 10],
+        ['Technology infrastructure', 7]
+      ]);
+
+      var options = {
+        pieHole: 0.85,
+        legend: 'none',
+        slices: {
+          0: {color: '#248a8a'},
+          1: {color: '#16bfbf'},
+          2: {color: '#a0e5e3'},
+          3: {color: '#d2f2ed'},
+          4: {color: '#238080'},
+          5: {color: '#35bdbd'}
+        },
+        sliceVisibilityThreshold: .01,
+        pieStartAngle: 220,
+        height: '100%',
+        width: '100%',
+        pieSliceText: 'none',
+        chartArea: {left: 0, top: 0, right: 0, bottom: 0, width: '100%', height: '100%'}
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('chart2'));
+      chart.draw(data, options);
+    }
+
+  </script>
+
+</head>
+<body>
+<header class="header">
+  <div class="header-wrapper">
+    <a href="/" class="header__logo header-block">
+      <img src="img/logo.png" alt="PINGPONG logo">
+      <span>PINGPONG</span>
+    </a>
+    <nav class="main-menu header-block">
+      <ul class="nav">
+        <li class="nav__item hvr-sink"><a href="#about" class="scroll-nav">about</a></li>
+        <li class="nav__item hvr-sink"><a href="#features" class="scroll-nav">features</a></li>
+        <li class="nav__item hvr-sink"><a href="#ico" class="scroll-nav">ico</a></li>
+        <li class="nav__item hvr-sink"><a href="#roadmap" class="scroll-nav">roadmap</a></li>
+        <li class="nav__item hvr-sink"><a href="#contacts" class="scroll-nav">contacts</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="banner">
+    <div class="banner-wrapper">
+      <h1 class="banner__slogan">
+        <span class="banner__text banner__text_big">pingpong</span>
+        <span class="banner__text banner__text_smaller wow flip">game changing communication solution</span>
+        <span class="banner__text banner__text_small">community driven</span>
+      </h1>
+      <div class="banner__form">
+        <input class="smaller" type="email" name="uptodate" id="uptodate" placeholder="Enter Email - Stay Updated">
+        <button class="custom-button custom-button_border-20" type="submit" id="subscribe-btn">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="about">
+    <div class="about-wrapper">
+
+      <div class="about__content">
+        <h2 class="block-header">WHAT IS PINGPONG?</h2>
+        <p class="about__text">
+          PingPong is a cross platform integrated messaging tool that combines powerful messenger and blockchain-powered
+          project management solution.
+        </p>
+        <ul class="about__specs bullet-list">
+          <li class="bullet-list__item"><i class="fa fa-check" aria-hidden="true"></i>a user-friendly and a secure chat,
+              as simple as the messenger you’re used to
+          </li>
+          <li class="bullet-list__item"><i class="fa fa-check" aria-hidden="true"></i>a project-management platform
+              based on kanban paradigm for tracking projects
+          </li>
+          <li class="bullet-list__item"><i class="fa fa-check" aria-hidden="true"></i>independent storage platform
+              which can store not only internal data but also external data added by the user
+          </li>
+          <li class="bullet-list__item"><i class="fa fa-check" aria-hidden="true"></i>a token creation service</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="features" class="features">
+    <div class="features-wrapper">
+      <h2 class="block-header">FEATURES</h2>
+      <div class="features__content">
+        <figure class="feature-item">
+          <img class="feature-item__image" src="img/group-conversations.png" alt="PingPong Group conversations">
+          <figcaption class="feature-item__description">
+            <p class="feature-item__header">Group conversations</p>
+            <p class="feature-item__text">
+              Group chat is a great way of collaboration on any topic or project. PingPong has everything you need to stay
+              focused: share media, use mentions and flexible notifications, create different-topic threads.
+            </p>
+          </figcaption>
+        </figure>
+        <figure class="feature-item">
+          <img class="feature-item__image" src="img/board.png" alt="PingPong Card">
+          <figcaption class="feature-item__description">
+            <p class="feature-header">Card</p>
+            <p class="feature-item__text">
+              Card is a place to add comments, checklists, upload file attachments and due dates.
+                You can share PingPong cards with many people you need and divvy up their tasks
+                to keep any project on track.
+            </p>
+          </figcaption>
+        </figure>
+        <figure class="feature-item">
+          <img class="feature-item__image" src="img/library.png" alt="PingPong Library">
+          <figcaption class="feature-item__description">
+            <p class="feature-item__header">Library</p>
+            <p class="feature-item__text">
+              A library is an organised storage box, for all content that has ever been sent in chat. Moreover, you can
+              download to PingPong library any files you want to store. Filter by date, sender, text inside documents.
+              Along with the state-of-art search technology, PingPong has deep search functionality, returning results in
+              case the keyword appears in the document or in the context.
+            </p>
+          </figcaption>
+        </figure>
+        <figure class="feature-item">
+          <img class="feature-item__image" src="img/payment.png" alt="PingPong Payment">
+          <figcaption class="feature-item__description">
+            <p class="feature-item__header">Payment</p>
+            <p class="feature-item__text">
+              PingPong suggests an innovative way of payment inside group conversations - a creation of tokens. Card tasks
+              in PingPong can be connected with automatic transactions, making payment of services really simple and
+              convenient.
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="feature-item">
+          <img class="feature-item__image" src="img/security.png" alt="PingPong Security">
+          <figcaption class="feature-item__description">
+            <p class="feature-item__header">Security </p>
+            <p class="feature-item__text">
+              PingPong uses end-to-end encryption to secure your personal and business information.
+            </p>
+          </figcaption>
+        </figure>
+        <figure class="feature-item">
+          <img class="feature-item__image" src="img/api.png" alt="PingPong Open API">
+          <figcaption class="feature-item__description">
+            <p class="feature-item__header">Open API</p>
+            <p class="feature-item__text">
+              PingPong is meant to simplify work with different Apps. Open API allows future integration with Dropbox,
+              Google Docs, GitHub, which also helps users to track the project process and decrease overwork with
+              information from different IMs, mails and project tools.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section id="ico" class="ico">
+    <div class="ico-wrapper">
+      <h2 class="block-header">WHY WE DO ICO?</h2>
+      <div class="ico__content">
+        <p class="ico__text">We want to prove that community will support our product - a universal platform which is able to cover needs of
+          individuals, households and business alike.</p>
+        <p class="ico__text">
+          We want to share our success. Our product is in MVP stage and we have a solid plan to reach our goals, but we
+          believe that with the help of the community we will move our product forward in development and marketing faster
+          and more efficient.
+        </p>
+        <p class="ico__text">
+          Moreover, users will have the opportunity to purchase 40% off all the tokens existing. Tokens ownership allows
+          participating in the general voting. All the actions undertaken over the company’s matters are totally
+          transparent. <span>Key point is that PingPong is a project with community engaged in product developing.</span>
+        </p>
+        <p class="ico__text">
+          With the success of ICO, PingPong will not only be a multi-functional IM but an effective project-management
+          platform that will simplify and make project payments more transparent with the help of blockchain technology.
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <section class="tokeninfo">
+    <div class="tokeninfo-wrapper">
+      <div class="info-row">
+        <p class="info-row__header">What is a PingPong Token?</p>
+        <p class="info-row__desc">PingPong Token represents a right to receive a part of PingPong balls, which could be
+          easily exchanged for BTC. Moreover, PingPongers community is engaged in voting over following matters: the
+          product development, the company’s marketing strategy, the product design. In addition, the token purchase
+          amount will be in direct ratio with paid features.
+        </p>
+      </div>
+      <div class="info-row">
+        <p class="info-row__header">Payout Structure:</p>
+        <p class="info-row__desc">By the end of each fiscal year, the company exchanges 50% of its profit for BTC which are
+          used to purchase PingPong balls (P-balls).Those P-balls are distributed proportionally among PingPongers
+          depending on token quantity. PingPongers are able to exchange their P-balls for BTC as well.
+        </p>
+      </div>
+      <div class="info-row">
+        <p class="info-row__header">Symbol:</p>
+        <p class="info-row__desc">PPT</p>
+      </div>
+      <div class="info-row">
+        <p class="info-row__header">Total Supply:</p>
+        <p class="info-row__desc">1 035 000 (one million thirty-five thousand) tokens</p>
+      </div>
+      <div class="info-row">
+        <p class="info-row__header">Adjustable:</p>
+        <p class="info-row__desc">All unsold tokens will be burned</p>
+      </div>
+      <div class="info-row">
+        <p class="info-row__header">Rate:</p>
+        <p class="info-row__desc">Price per token, locked. 1 token = 10 USD</p>
+      </div>
+    </div>
+  </section>
+  <section class="token-allocation">
+    <div class="token-allocation-wrapper">
+      <h2 class="block-header">Token Allocation</h2>
+      <div class="token-stats">
+        <div class="stats-table">
+          <div class="chart">
+            <div class="chart__content" id="chart1"></div>
+            <div class="chart__label">PRE-ICO allocation<br>structure</div>
+          </div>
+          <div class="chart-data">
+            <div class="data-row">
+              <div class="data-row__label data-row__label_color2"></div>
+              <div class="data-row__data">R&D (including team expanding, advisers)</div>
+              <div class="data-row__percentage"><span class="countup">33</span>%</div>
+            </div>
+            <div class="data-row">
+              <div class="data-row__label data-row__label_color3"></div>
+              <div class="data-row__data">Indirect (legal, office)</div>
+              <div class="data-row__percentage"><span class="countup">26</span>%</div>
+            </div>
+            <div class="data-row">
+              <div class="data-row__label data-row__label_color1"></div>
+              <div class="data-row__data">Marketing (promotion, community & expansion)</div>
+              <div class="data-row__percentage"><span class="countup">39</span>%</div>
+            </div>
+            <div class="data-row">
+              <div class="data-row__label data-row__label_color4"></div>
+              <div class="data-row__data">ICO-Hypethon conditions</div>
+              <div class="data-row__percentage"><span class="countup">2</span>%</div>
+            </div>
+          </div>
+        </div>
+        <div class="stats-table">
+          <div class="chart">
+            <div class="chart__content" id="chart2"></div>
+            <div class="chart__label">ICO allocation<br>structure</div>
+          </div>
+          <div class="chart-data">
+            <div class="data-row">
+              <div class="data-row__label data-row__label_color2"></div>
+              <div class="data-row__data">ICO-Hypethon conditions</div>
+              <div class="data-row__percentage"><span class="countup">2</span>%</div>
+            </div>
+            <div class="data-row">
+              <div class="data-row__label data-row__label_color3"></div>
+              <div class="data-row__data">PingPong Team</div>
+              <div class="data-row__percentage"><span class="countup">5</span>%</div>
+            </div>
+            <div class="data-row">
+              <div class="data-row__label data-row__label_color1"></div>
+              <div class="data-row__data">R&D (including team expanding, advisers)</div>
+              <div class="data-row__percentage"><span class="countup">30</span>%</div>
+            </div>
+            <div class="data-row">
+              <div class="data-row__label data-row__label_color4"></div>
+              <div class="data-row__data">Marketing (promotion, market growth, community & expansion)</div>
+              <div class="data-row__percentage"><span class="countup">46</span>%</div>
+            </div>
+            <div class="data-row">
+              <div class="data-row__label data-row__label_color4"></div>
+              <div class="data-row__data">Indirect (legal, office)</div>
+              <div class="data-row__percentage"><span class="countup">10</span>%</div>
+            </div>
+            <div class="data-row">
+              <div class="data-row__label data-row__label_color4"></div>
+              <div class="data-row__data">Technology infrastructure</div>
+              <div class="data-row__percentage"><span class="countup">7</span>%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="roadmap" class="roadmap">
+    <div class="roadmap-wrapper wow slideInDown" data-wow-offset="300">
+      <h2 class="block-header">ROADMAP</h2>
+      <div class="map">
+        <div class="line line_desc">
+          <p class="line__text">Attraction of first investments</p>
+          <p class="line__text">MVP release, ICO preparations</p>
+          <p class="line__text">PRE-ICO</p>
+          <p class="line__text">Marketing & Release of alpha version</p>
+          <p class="line__text">ICO</p>
+          <p class="line__text">Product development & Marketing</p>
+          <p class="line__text">Release of beta version</p>
+          <p class="line__text">RTM & General Availability</p>
+        </div>
+        <div class="line line_coord">
+          <div class="line__part">
+            <div class="mark"></div>
+          </div>
+          <div class="line__part">
+            <div class="mark"></div>
+          </div>
+          <div class="line__part">
+            <div class="mark">
+              <div class="mark_around"></div>
+            </div>
+          </div>
+          <div class="line__part">
+            <div class="mark"></div>
+          </div>
+          <div class="line__part">
+            <div class="mark"></div>
+          </div>
+          <div class="line__part">
+            <div class="mark"></div>
+          </div>
+          <div class="line__part">
+            <div class="mark"></div>
+          </div>
+          <div class="last">
+            <div class="mark"></div>
+          </div>
+
+        </div>
+        <div class="line line_years">
+          <p class="line__text">December 2016</p>
+          <p class="line__text">June 2017</p>
+          <p class="line__text">August 2017</p>
+          <p class="line__text">September 2017</p>
+          <p class="line__text">October 2017</p>
+          <p class="line__text">November 2017</p>
+          <p class="line__text">December 2017</p>
+          <p class="line__text">January 2018</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="team">
+    <div class="team-wrapper">
+      <h2 class="block-header">Meet PINGPONGERS</h2>
+      <div class="team-block">
+        <div class="profile">
+          <div class="profile__photo" id="inozem_profile" ></div>
+          <span class="profile__name">Rus Inozemtsev</span>
+          <span class="profile__position">Founder & CEO</span>
+        </div>
+
+        <div class="profile">
+          <div class="profile__photo" id="naletov_profile" ></div>
+          <span class="profile__name">Mikhail Naletov</span>
+          <span class="profile__position">Marketing Guru</span>
+        </div>
+        <div class="profile">
+          <div class="profile__photo" id="polukeev_profile"></div>
+          <span class="profile__name">Yuri Polukeev</span>
+          <span class="profile__position">Strategy Adviser</span>
+        </div>
+        <div class="profile">
+          <div class="profile__photo" id="grigoryeva_profile"></div>
+          <span class="profile__name">Anna Grigoryeva</span>
+          <span class="profile__position">Project Manager</span>
+        </div>
+        <div class="profile">
+          <div class="profile__photo" id="inozemtseva_profile"></div>
+          <span class="profile__name">Tanya Inozemtseva</span>
+          <span class="profile__position">Operations Manager</span>
+        </div>
+        <div class="profile">
+          <div class="profile__photo" id="safonov_profile"></div>
+          <span class="profile__name">Oleg Safonov</span>
+          <span class="profile__position">Front-end Guru</span>
+        </div>
+        <div class="profile">
+          <div class="profile__photo" id="shushkov_profile"></div>
+          <span class="profile__name">Vova Shushkov</span>
+          <span class="profile__position">Back-end Guru</span>
+        </div>
+        <div class="profile">
+          <div class="profile__photo" id="gogolev_profile"></div>
+          <span class="profile__name">Dmitry Gogolev</span>
+          <span class="profile__position">Smart Contract Guru</span>
+        </div>
+
+        <div class="profile">
+          <div class="profile__photo" id="evsyukov_profile"></div>
+          <span class="profile__name">Alexander Evsyukov</span>
+          <span class="profile__position">Front-end Developer</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+<footer id="contacts" class="footer">
+  <div class="footer-wrapper">
+    <nav class="main-menu main-menu_left-align">
+      <ul class="nav">
+        <li class="nav__item nav__item_color-grey hvr-float"><a class="scroll-nav" href="#about">about</a></li>
+        <li class="nav__item nav__item_color-grey hvr-float"><a class="scroll-nav" href="#features">features</a></li>
+        <li class="nav__item nav__item_color-grey hvr-float"><a class="scroll-nav" href="#ico">ico</a></li>
+        <li class="nav__item nav__item_color-grey hvr-float"><a class="scroll-nav" href="#roadmap">roadmap</a></li>
+        <li class="nav__item nav__item_color-grey hvr-float"><a class="scroll-nav" href="#contacts">contacts</a></li>
+      </ul>
+    </nav>
+      <ul class="social-links">
+        <li class="social-links__item">
+          <a class="social-links__link" href="http://fb.me/pingpong.rocks">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        <li class="social-links__item">
+          <a class="social-links__link" href="mailto:hi@pingpong.rocks">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        <li class="social-links__item">
+          <a class="social-links__link" href="https://twitter.com/pingpongtwitt">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        <li class="social-links__item">
+          <a class="social-links__link" href="https://medium.com/@pingpong.rocks">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+      </ul>
+  </div>
+</footer>
+<a class="custom-button custom-button_border-round custom-button_fixed custom-button_background-visible" id="totop">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+</a>
+<div class="copyright">
+    <p>Copyright © 2017 PINGPONG SOFTWARE INC.</p>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript"
+        src="https://rawgithub.com/louisremi/jquery-smartresize/master/jquery.throttledresize.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="js/vendor/jquery.waypoints.min.js"></script>
+<script src="js/vendor/jquery.countup.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/plugins.js"></script>
+
+</body>
+</html>
